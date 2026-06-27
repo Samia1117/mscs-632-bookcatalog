@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a console-based Book Catalog application developed in **C#** using **.NET** as part of the **MSCS 632 – Advanced Programming Languages** course.
+This project is a console-based Book Catalog application developed in **C#** using **.NET** and **Ruby** as part of the **MSCS 632 – Advanced Programming Languages** course.
 
 The application allows users to manage a collection of books through a menu-driven interface. Book data is stored in a JSON file, allowing the catalog to persist between application runs.
 
