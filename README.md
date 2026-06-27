@@ -24,8 +24,6 @@ The application allows users to manage a collection of books through a menu-driv
 
 ---
 
-# Book Catalog Application Ruby
-
 ## Author
 
 **Samia Zaman**
