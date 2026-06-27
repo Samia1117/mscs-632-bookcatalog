@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Siddhartha",
+    "author": "Hermann Hasse",
+    "genre": "Philosophical Fiction/Novel",
+    "year": 1922
+  },
+  {
+    "title": "David CopperField",
+    "author": "Charles Dickens",
+    "genre": "Fictional Autobiography",
+    "year": 1850
+  },
+  {
+    "title": "Anna Karenina ",
+    "author": "Leo Tolstoy",
+    "genre": "Literary Fiction/Novel",
+    "year": 1878
+  },
+  {
+    "title": "Crime and Punishment ",
+    "author": "Fyodor Dostoyevsky",
+    "genre": "Philosophical Fiction/Novel",
+    "year": 1866
+  },
+  {
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "genre": "Software Architecture & Systems Engineering",
+    "year": 2017
+  }
+]
