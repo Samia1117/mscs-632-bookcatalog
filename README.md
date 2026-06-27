@@ -1,4 +1,4 @@
-# mscs-632-bookcatalog
+# MSCS-632-Book Catalog
 
 ## Overview
 
