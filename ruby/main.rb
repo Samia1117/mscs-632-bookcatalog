@@ -23,6 +23,27 @@ def display_grouped(grouped)
   end
 end
 
+def get_required_input(prompt)
+  loop do
+    print prompt
+    val = gets.chomp
+    return val unless val.strip.empty?
+    puts 'Input cannot be empty. Please try again.'
+  end
+end
+
+# Integer() is stricter than .to_i - it raises ArgumentError on invalid input
+def get_year_input(prompt)
+  loop do
+    print prompt
+    begin
+      return Integer(gets.chomp)
+    rescue ArgumentError
+      puts 'Invalid year - please enter a number.'
+    end
+  end
+end
+
 # loop do runs indefinitely; break exits it
 loop do
   puts "\n=== Book Catalog ==="
@@ -41,17 +62,10 @@ loop do
   # case/when is Ruby's switch equivalent; it matches against === by default
   case gets.chomp
   when '1'
-    print 'Title:  '; title  = gets.chomp
-    print 'Author: '; author = gets.chomp
-    print 'Genre:  '; genre  = gets.chomp
-    print 'Year:   '
-    begin
-      # Integer() is stricter than .to_i - it raises ArgumentError on invalid input
-      year = Integer(gets.chomp)
-    rescue ArgumentError
-      puts 'Invalid year - please enter a number.'
-      next
-    end
+    title  = get_required_input('Title:  ')
+    author = get_required_input('Author: ')
+    genre  = get_required_input('Genre:  ')
+    year   = get_year_input('Year:   ')
     catalog.add(title, author, genre, year)
     puts "Added: \"#{title}\""
 
@@ -87,13 +101,15 @@ loop do
       val = gets.chomp
       updates[:genre] = val unless val.empty?
 
-      print "New year   (Enter to keep '#{book.year}'): "
-      val = gets.chomp
-      unless val.empty?
+      loop do
+        print "New year   (Enter to keep '#{book.year}'): "
+        val = gets.chomp
+        break if val.empty?
         begin
           updates[:year] = Integer(val)
+          break
         rescue ArgumentError
-          puts "Invalid year - keeping #{book.year}."
+          puts 'Invalid year - please enter a number.'
         end
       end
 
